@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.ufrn.imd.aulaservlet.dominio.Usuario;
 
-@WebFilter("/*")
+@WebFilter("/paginas/*")
 public class SegurancaFilter implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response
@@ -25,7 +25,7 @@ public class SegurancaFilter implements Filter {
 		Usuario usuario = (Usuario) req.getSession().getAttribute("usuario");
 		
 		if(usuario == null) {
-			res.sendRedirect("/aulaservlet-1/login.jsp");
+			res.sendRedirect("/AulaServlet2019/login.jsp");
 		}else {
 			chain.doFilter(request, response);
 		}
