@@ -1,10 +1,37 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html">
-
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
 <h:head>
 	<title>HelloCondenado</title>
 </h:head>
 
 <h:body>
 	<h:outputText value="#{helloWorldMBean.world}"/>
+ 
+    <h:form>
+    <p:growl id="messages" showDetail="true"/>
+ 
+    <p:slideMenu style="width:200px">
+        <p:submenu label="Ajax Menuitems" icon="pi pi-refresh">
+            <p:menuitem value="Save" action="#{menuView.save}" update="messages" icon="pi pi-save" />
+            <p:menuitem value="Update" action="#{menuView.update}" update="messages" icon="pi pi-refresh" />
+        </p:submenu>
+        <p:submenu label="Non-Ajax Menuitem" icon="pi pi-clone">
+            <p:menuitem value="Delete" action="#{menuView.delete}"  ajax="false" icon="pi pi-times"/>
+        </p:submenu>
+        <p:separator />
+        <p:submenu label="Navigations" icon="pi pi-home">
+            <p:submenu label="Prime Links">
+                <p:menuitem value="Prime" url="http://www.prime.com.tr" />
+                <p:menuitem value="PrimeFaces" url="http://www.primefaces.org" />
+            </p:submenu>
+            <p:menuitem value="Mobile" />
+        </p:submenu>
+    </p:slideMenu>
+     
+    <p:separator />
+ 
+</h:form>
 </h:body>
 </html>
