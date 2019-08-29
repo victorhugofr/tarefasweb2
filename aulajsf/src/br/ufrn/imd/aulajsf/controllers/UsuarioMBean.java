@@ -13,6 +13,10 @@ import br.ufrn.imd.aulajsf.repositorios.UsuarioRepositorio;
 @Named("usuarioMBean")
 @SessionScoped
 public class UsuarioMBean implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Usuario usuario;
 	private Usuario usuarioLogado;
 

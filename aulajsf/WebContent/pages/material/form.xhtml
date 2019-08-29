@@ -1,0 +1,45 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:b="http://bootsfaces.net/ui"
+	xmlns:p="http://primefaces.org/ui" template="/include/template.xhtml">
+
+	<ui:define name="conteudo">
+
+		<h4>
+			Novo Material -
+			<h:outputText value="#{usuarioMBean.usuarioLogado.login}" />
+		</h4>
+		<h:messages />
+
+		<h:form>
+			<fieldset>
+				<p>Código</p>
+				<p>
+					<h:inputText value="#{materialMBean.material.codigo}"
+						placeholder="Username" label="Codigo" colMd="10" labelColMd="2"
+						required="true" requiredMessage="Código obrigatório" />
+				</p>
+				<p>Descrição</p>
+				<p>
+					<h:inputText value="#{materialMBean.material.descricao}"
+						required="true" />
+				</p>
+				<p>Data de cadastro</p>
+				<p>
+					<h:inputText value="#{materialMBean.material.dataCadastro}"
+						id="data">
+						<f:convertDateTime pattern="dd/MM/yyyy" />
+					</h:inputText>
+				</p>
+				<p>
+					<b:commandButton action="#{materialMBean.cadastrarMaterial}"
+						value="Cadastrar" look="primary" />
+					<b:commandButton action="#{materialMBean.listarMateriais}"
+						value="Listagem" immediate="true" look="primary" />
+				</p>
+			</fieldset>
+		</h:form>
+	</ui:define>
+</ui:composition>

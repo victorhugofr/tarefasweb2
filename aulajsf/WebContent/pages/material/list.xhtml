@@ -1,0 +1,31 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	template="/include/template.xhtml">
+
+	<ui:define name="conteudo">
+
+		<h4>
+			Listagem de materiais -
+			<h:outputText value="#{usuarioMBean.usuarioLogado.login}" />
+		</h4>
+		<h:messages />
+
+		<h:form>
+			<b:dataTable value="#{materialMBean.materiaisModel}" var="material">
+				<b:dataTableColumn value="#{material.codigo}" label="Código"/>
+				<b:dataTableColumn value="#{material.descricao}" label="Descrição"/>
+				<b:dataTableColumn value="#{material.dataCadastro}" label="Data"/>
+				<b:dataTableColumn value="#{material.usuarioCadastro.nome}" label="Usuario"/>
+				<h:column>
+					<b:commandButton action="#{materialMBean.removerMaterial}"
+						value="Remover" look="danger" />
+				</h:column>
+			</b:dataTable>
+			<b:commandButton action="#{materialMBean.novoMaterial}"
+						value="Novo Cadastro" look="primary" />
+		</h:form>
+	</ui:define>
+</ui:composition>
