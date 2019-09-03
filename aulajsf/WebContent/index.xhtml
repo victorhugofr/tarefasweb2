@@ -14,7 +14,7 @@
 			<fieldset>
 				<p>Nome: </p><p><b:inputText value="#{usuarioMBean.usuario.nome}" placeholder="Nome"/></p>
 				<p>Login: </p><p><b:inputText value="#{usuarioMBean.usuario.login}" placeholder="Login"/></p>
-				<p>Senha: </p><p><b:inputText value="#{usuarioMBean.usuario.senha}" placeholder="Senha"/></p>
+				<p>Senha: </p><p><b:inputSecret value="#{usuarioMBean.usuario.senha}" placeholder="Senha"/></p>
 				<p>
 				<b:commandButton action="#{usuarioMBean.cadastrar}" value="Cadastrar" look="primary"/>
 				<b:commandButton action="#{usuarioMBean.acessarLogin}" value="Login" look="primary"/>

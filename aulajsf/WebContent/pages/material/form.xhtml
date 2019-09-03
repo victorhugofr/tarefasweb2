@@ -2,8 +2,8 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:b="http://bootsfaces.net/ui"
-	xmlns:p="http://primefaces.org/ui" template="/include/template.xhtml">
+	xmlns:b="http://bootsfaces.net/ui" xmlns:p="http://primefaces.org/ui"
+	template="/include/template.xhtml">
 
 	<ui:define name="conteudo">
 
@@ -11,32 +11,20 @@
 			Novo Material -
 			<h:outputText value="#{usuarioMBean.usuarioLogado.login}" />
 		</h4>
-		<h:messages />
-
-		<h:form>
+		<b:form horizontal="true">
 			<fieldset>
-				<p>Cpf</p>
-				<p>
-					<h:inputText value="#{materialMBean.material.cpf}"
-						placeholder="Username" label="Codigo" colMd="10" labelColMd="2"
-						required="true" requiredMessage="Cpf obrigatório" />
-				</p>
-				<p>Nome</p>
-				<p>
-					<h:inputText value="#{materialMBean.material.nome}"
-						required="true" />
-				</p>
-				<p>Login</p>
-				<p>
-					<h:inputText value="#{materialMBean.material.login}"
-						id="login" required="true">
-					</h:inputText>
-				</p>
-				<p>Senha</p>
-				<p>
-					<h:inputText value="#{materialMBean.material.senha}"
-						required="true" />
-				</p>
+				<b:formGroup>
+					<b:inputText value="#{materialMBean.material.cpf}" span="5"
+						placeholder="CPF" required="true"
+						requiredMessage="Cpf obrigatório" ><f:facet name="prepend">CPF</f:facet></b:inputText>
+					<b:inputText value="#{materialMBean.material.nome}"
+						placeholder="Nome" span="5"  required="true" ><f:facet name="prepend">Nome</f:facet></b:inputText>
+				</b:formGroup>
+					<b:inputText value="#{materialMBean.material.login}"
+						placeholder="Login" span="10"  id="login"
+						required="true"><f:facet name="prepend">Login</f:facet></b:inputText>
+					<b:inputSecret value="#{materialMBean.material.senha}"
+						placeholder="Senha" span="10"  required="true" ><f:facet name="prepend">Senha</f:facet></b:inputSecret>
 				<p>
 					<b:commandButton action="#{materialMBean.cadastrarMaterial}"
 						value="Cadastrar" look="primary" />
@@ -44,6 +32,8 @@
 						value="Listagem" immediate="true" look="primary" />
 				</p>
 			</fieldset>
-		</h:form>
+		</b:form>
+		<h:messages />
+
 	</ui:define>
 </ui:composition>
