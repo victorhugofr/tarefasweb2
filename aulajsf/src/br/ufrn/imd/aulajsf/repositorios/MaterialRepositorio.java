@@ -17,9 +17,9 @@ public class MaterialRepositorio {
 	public static void adicionar(Material material) {
 		EntityTransaction transaction = entityManager.getTransaction();
 		
-//		transaction.begin();
+		transaction.begin();
 		entityManager.persist(material);
-//		transaction.commit();
+		transaction.commit();
 	}
 	
 	public static void remover(Material material) {

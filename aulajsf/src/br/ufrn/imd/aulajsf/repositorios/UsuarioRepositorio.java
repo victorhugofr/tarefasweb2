@@ -16,22 +16,25 @@ public class UsuarioRepositorio {
 	public static Usuario getUsuario(String login, String senha) {	
 			EntityTransaction transaction = entityManager.getTransaction();
 //			transaction.begin();
-			List resultList = entityManager.createQuery("from Usuario u where u.login='"+login+"'").getResultList();
-			List<Usuario> retorno = resultList;
+			List<Usuario> retorno= entityManager.createQuery("from Usuario u where u.login='"+login+"'").getResultList();
+			
 		
+			System.out.println(retorno.size());
 		for(Usuario u:retorno) {
 			if(u.getLogin().equals(login) && u.getSenha().equals(senha)) {
+				System.out.println("achou");
 				return u;
 			}
 		}
+		System.out.println("aaaaaaaaaaa");
 		return null;
 	}
 	
 	public static void salvar(Usuario entidade) {
 		
 		EntityTransaction transaction = entityManager.getTransaction();
-//		transaction.begin();
+		transaction.begin();
 		entityManager.persist(entidade);
-//		transaction.commit();
+		transaction.commit();
 	}
 }

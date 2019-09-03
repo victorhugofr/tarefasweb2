@@ -20,6 +20,11 @@ public class UsuarioMBean implements Serializable {
 	private Usuario usuario;
 	private Usuario usuarioLogado;
 
+	
+	public String acessarLogin() {
+		return "/pages/login.jsf";
+	}
+	
 	public String logar() {
 		Usuario usuarioBd = UsuarioRepositorio.getUsuario(usuario.getLogin(), usuario.getSenha());
 		if (usuarioBd != null) {
@@ -27,7 +32,7 @@ public class UsuarioMBean implements Serializable {
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuarioLogado", usuarioLogado);
 			return "/pages/index.jsf";
 		} else {
-			FacesMessage msg = new FacesMessage("Usuario n√£o encontrado");
+			FacesMessage msg = new FacesMessage("Usuario n„o encontrado");
 			msg.setSeverity(FacesMessage.SEVERITY_ERROR);
 			FacesContext.getCurrentInstance().addMessage("", msg);
 			return null;
