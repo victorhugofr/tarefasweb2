@@ -3,24 +3,35 @@ package br.ufrn.imd.aulajsf.repositorios;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+
 import br.ufrn.imd.aulajsf.dominio.Usuario;
+import br.ufrn.imd.aulajsf.util.HibernateUtil;
 
 public class UsuarioRepositorio {
-	public static List<Usuario> usuarios;
-	public static Usuario getUsuario(String login, String senha) {
+	
+	private static EntityManager entityManager = HibernateUtil.getEntityManager();
+	
+	public static Usuario getUsuario(String login, String senha) {	
+			EntityTransaction transaction = entityManager.getTransaction();
+			transaction.begin();
+			List resultList = entityManager.createQuery("from usuario where login='"+login+"'").getResultList();
+			List<Usuario> retorno = resultList;
 		
-		if(usuarios==null) {
-			usuarios=new ArrayList<Usuario>();
-			Usuario usr = new Usuario("victor","victor");
-			usr.setNome("Victor");
-			usuarios.add(usr);
-		}
-		
-		for(Usuario u:usuarios) {
+		for(Usuario u:retorno) {
 			if(u.getLogin().equals(login) && u.getSenha().equals(senha)) {
 				return u;
 			}
 		}
 		return null;
+	}
+	
+	public static void salvar(Usuario entidade) {
+		
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		entityManager.persist(entidade);
+		transaction.commit();
 	}
 }

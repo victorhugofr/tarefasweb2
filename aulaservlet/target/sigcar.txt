@@ -1,0 +1,18 @@
+                                                                                                                          
+                                                                                                                          
+   SSSSSSSSSSSSSSS IIIIIIIIII      GGGGGGGGGGGGG        CCCCCCCCCCCCC               AAA               RRRRRRRRRRRRRRRRR   
+ SS:::::::::::::::SI::::::::I   GGG::::::::::::G     CCC::::::::::::C              A:::A              R::::::::::::::::R  
+S:::::SSSSSS::::::SI::::::::I GG:::::::::::::::G   CC:::::::::::::::C             A:::::A             R::::::RRRRRR:::::R 
+S:::::S     SSSSSSSII::::::IIG:::::GGGGGGGG::::G  C:::::CCCCCCCC::::C            A:::::::A            RR:::::R     R:::::R
+S:::::S              I::::I G:::::G       GGGGGG C:::::C       CCCCCC           A:::::::::A             R::::R     R:::::R
+S:::::S              I::::IG:::::G              C:::::C                        A:::::A:::::A            R::::R     R:::::R
+ S::::SSSS           I::::IG:::::G              C:::::C                       A:::::A A:::::A           R::::RRRRRR:::::R 
+  SS::::::SSSSS      I::::IG:::::G    GGGGGGGGGGC:::::C                      A:::::A   A:::::A          R:::::::::::::RR  
+    SSS::::::::SS    I::::IG:::::G    G::::::::GC:::::C                     A:::::A     A:::::A         R::::RRRRRR:::::R 
+       SSSSSS::::S   I::::IG:::::G    GGGGG::::GC:::::C                    A:::::AAAAAAAAA:::::A        R::::R     R:::::R
+            S:::::S  I::::IG:::::G        G::::GC:::::C                   A:::::::::::::::::::::A       R::::R     R:::::R
+            S:::::S  I::::I G:::::G       G::::G C:::::C       CCCCCC    A:::::AAAAAAAAAAAAA:::::A      R::::R     R:::::R
+SSSSSSS     S:::::SII::::::IIG:::::GGGGGGGG::::G  C:::::CCCCCCCC::::C   A:::::A             A:::::A   RR:::::R     R:::::R
+S::::::SSSSSS:::::SI::::::::I GG:::::::::::::::G   CC:::::::::::::::C  A:::::A               A:::::A  R::::::R     R:::::R
+S:::::::::::::::SS I::::::::I   GGG::::::GGG:::G     CCC::::::::::::C A:::::A                 A:::::A R::::::R     R:::::R
+ SSSSSSSSSSSSSSS   IIIIIIIIII      GGGGGG   GGGG        CCCCCCCCCCCCCAAAAAAA                   AAAAAAARRRRRRRR     RRRRRRR

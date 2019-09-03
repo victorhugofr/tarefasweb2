@@ -15,23 +15,27 @@
 
 		<h:form>
 			<fieldset>
-				<p>Código</p>
+				<p>Cpf</p>
 				<p>
-					<h:inputText value="#{materialMBean.material.codigo}"
+					<h:inputText value="#{materialMBean.material.cpf}"
 						placeholder="Username" label="Codigo" colMd="10" labelColMd="2"
-						required="true" requiredMessage="Código obrigatório" />
+						required="true" requiredMessage="Cpf obrigatório" />
 				</p>
-				<p>Descrição</p>
+				<p>Nome</p>
 				<p>
-					<h:inputText value="#{materialMBean.material.descricao}"
+					<h:inputText value="#{materialMBean.material.nome}"
 						required="true" />
 				</p>
-				<p>Data de cadastro</p>
+				<p>Login</p>
 				<p>
-					<h:inputText value="#{materialMBean.material.dataCadastro}"
-						id="data">
-						<f:convertDateTime pattern="dd/MM/yyyy" />
+					<h:inputText value="#{materialMBean.material.login}"
+						id="login" required="true">
 					</h:inputText>
+				</p>
+				<p>Senha</p>
+				<p>
+					<h:inputText value="#{materialMBean.material.senha}"
+						required="true" />
 				</p>
 				<p>
 					<b:commandButton action="#{materialMBean.cadastrarMaterial}"

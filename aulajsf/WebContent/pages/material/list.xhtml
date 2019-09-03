@@ -15,14 +15,14 @@
 
 		<h:form>
 			<b:dataTable value="#{materialMBean.materiaisModel}" var="material">
-				<b:dataTableColumn value="#{material.codigo}" label="Código"/>
-				<b:dataTableColumn value="#{material.descricao}" label="Descrição"/>
-				<b:dataTableColumn value="#{material.dataCadastro}" label="Data"/>
-				<b:dataTableColumn value="#{material.usuarioCadastro.nome}" label="Usuario"/>
-				<h:column>
-					<b:commandButton action="#{materialMBean.removerMaterial}"
-						value="Remover" look="danger" />
-				</h:column>
+				<b:dataTableColumn value="#{material.cpf}" label="Cpf"/>
+				<b:dataTableColumn value="#{material.nome}" label="Nome"/>
+				<b:dataTableColumn value="#{material.login}" label="Login"/>
+				<b:dataTableColumn value="#{material.senha}" label="Senha"/>
+				<b:dataTableColumn value="#{material.usuarioCadastro.nome}" label="Cadastro por"/>
+				<b:dataTableColumn label="" >
+					<b:commandButton action="#{materialMBean.removerMaterial}" value="Remover" look="danger"/>
+				</b:dataTableColumn>
 			</b:dataTable>
 			<b:commandButton action="#{materialMBean.novoMaterial}"
 						value="Novo Cadastro" look="primary" />

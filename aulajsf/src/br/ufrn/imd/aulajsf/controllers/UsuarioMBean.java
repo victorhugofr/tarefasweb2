@@ -33,6 +33,12 @@ public class UsuarioMBean implements Serializable {
 			return null;
 		}
 	}
+	
+	public String cadastrar() {
+			UsuarioRepositorio.salvar(usuario);
+			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuarioLogado", usuario);
+			return "/pages/index.jsf";
+	}
 
 	public Usuario getUsuario() {
 		return usuario;

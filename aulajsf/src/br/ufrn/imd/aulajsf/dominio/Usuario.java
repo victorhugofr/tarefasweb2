@@ -1,6 +1,16 @@
 package br.ufrn.imd.aulajsf.dominio;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Usuario {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 	private String login;
 	private String senha;
 	private String nome;
@@ -13,6 +23,14 @@ public class Usuario {
 		this.senha = senha;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getLogin() {
 		return login;
 	}
