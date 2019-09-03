@@ -17,9 +17,9 @@ public class MaterialRepositorio {
 	public static void adicionar(Material material) {
 		EntityTransaction transaction = entityManager.getTransaction();
 		
-		transaction.begin();
+//		transaction.begin();
 		entityManager.persist(material);
-		transaction.commit();
+//		transaction.commit();
 	}
 	
 	public static void remover(Material material) {
@@ -28,10 +28,10 @@ public class MaterialRepositorio {
 	
 	public static List<Material> listarMateriais(){
 		EntityTransaction transaction = entityManager.getTransaction();
-		transaction.begin();
-		List<Material> retorno = entityManager.createQuery("from material").getResultList();
+//		transaction.begin();
+		List<Material> retorno = entityManager.createQuery("from Material").getResultList();
 		materiais=retorno;
-		transaction.commit();
+//		transaction.commit();
 		return materiais;
 	}
 }

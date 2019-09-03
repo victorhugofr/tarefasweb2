@@ -32,6 +32,7 @@ public class MaterialMBean implements Serializable{
 
 	public String listarMateriais() {
 		materiaisModel = new ListDataModel<Material>(MaterialRepositorio.listarMateriais());
+		
 		return "/pages/material/list.jsf";
 	}
 

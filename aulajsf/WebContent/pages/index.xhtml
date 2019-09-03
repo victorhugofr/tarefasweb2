@@ -3,6 +3,7 @@
     xmlns:f="http://java.sun.com/jsf/core"
     xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:p="http://primefaces.org/ui"
+    xmlns:b="http://bootsfaces.net/ui"
     template="/include/template.xhtml">
 
 	<ui:define name="conteudo">
@@ -15,6 +16,8 @@
 				<p><h:commandLink action="#{materialMBean.novoMaterial}" value="Novo Material"/></p>
 				<p><h:commandLink action="#{materialMBean.listarMateriais}" value="Listar Materiais"/></p>
 			</fieldset>
+			<b:commandButton action="/index.jsf"
+						value="Voltar" look="primary" />
 		</h:form>
 	</ui:define>
 </ui:composition>

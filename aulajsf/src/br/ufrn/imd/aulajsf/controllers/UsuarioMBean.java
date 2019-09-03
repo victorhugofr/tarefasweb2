@@ -36,6 +36,7 @@ public class UsuarioMBean implements Serializable {
 	
 	public String cadastrar() {
 			UsuarioRepositorio.salvar(usuario);
+			usuarioLogado = usuario;
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuarioLogado", usuario);
 			return "/pages/index.jsf";
 	}

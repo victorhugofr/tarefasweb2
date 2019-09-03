@@ -1,7 +1,5 @@
 package br.ufrn.imd.aulajsf.dominio;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,7 +10,7 @@ import javax.persistence.Transient;
 public class Material {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String cpf;
 	private String nome;

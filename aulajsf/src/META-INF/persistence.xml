@@ -6,19 +6,19 @@
  http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 
 	<persistence-unit name="AulaJsf">
-<!-- 	<provider>org.hibernate.ejb.HibernatePersistence</provider> -->
-	<class>br.ufrn.imd.aulajsf.dominio.Usuario</class>
+	<provider>org.hibernate.ejb.HibernatePersistence</provider>
 	<class>br.ufrn.imd.aulajsf.dominio.Material</class>
+	<class>br.ufrn.imd.aulajsf.dominio.Usuario</class>
 		<properties>
 			<property name="hibernate.connection.driver_class"
 				value="org.postgresql.Driver" />
 			<property name="hibernate.connection.url"
-				value="jdbc:postgresql://localhost:5436/AulaJsf" />
+				value="jdbc:postgresql://localhost:5432/AulaJsf" />
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="hibernate.connection.username"
 				value="postgres" />
-			<property name="hibernate.connection.password" value="admin" />
+			<property name="hibernate.connection.password" value="25123dago" />
 <!-- 			<property name="connection.pool_size" value="1"/> -->
 			<property name="hibernate.format_sql" value="false"/>
 			

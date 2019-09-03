@@ -15,8 +15,8 @@ public class UsuarioRepositorio {
 	
 	public static Usuario getUsuario(String login, String senha) {	
 			EntityTransaction transaction = entityManager.getTransaction();
-			transaction.begin();
-			List resultList = entityManager.createQuery("from usuario where login='"+login+"'").getResultList();
+//			transaction.begin();
+			List resultList = entityManager.createQuery("from Usuario u where u.login='"+login+"'").getResultList();
 			List<Usuario> retorno = resultList;
 		
 		for(Usuario u:retorno) {
@@ -30,8 +30,8 @@ public class UsuarioRepositorio {
 	public static void salvar(Usuario entidade) {
 		
 		EntityTransaction transaction = entityManager.getTransaction();
-		transaction.begin();
+//		transaction.begin();
 		entityManager.persist(entidade);
-		transaction.commit();
+//		transaction.commit();
 	}
 }
